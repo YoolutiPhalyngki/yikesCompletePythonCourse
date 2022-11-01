@@ -1,4 +1,4 @@
 # Learning List
-friends = ["Rolf", "Bob", "Anne"]
+friends = [["Rolf", 24], ["Bob", 30], ["Anne", 27]]
 
-print(len(friends))
+print(friends[0][0])
