@@ -1,5 +1,5 @@
 # Learning List
 friends = ["Rolf", "Bob", "Anne"]
-friends.append("Jen")
+friends.remove("Bob")
 
 print(friends)
