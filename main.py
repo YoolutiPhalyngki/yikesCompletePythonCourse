@@ -1,6 +1,4 @@
 # Learning List
-friend1 = "Rolf"
-friend2 = "Bob"
-friend3 = "Anne"
+friends = ["Rolf", "Bob", "Anne"]
 
-print(friend1)
+print(friends[0])
