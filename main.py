@@ -6,6 +6,6 @@ art_friends.add("Jen")
 
 print(art_friends)
 
-art_friends.add("Jen")
+art_friends.remove("Jen")
 
 print(art_friends)
