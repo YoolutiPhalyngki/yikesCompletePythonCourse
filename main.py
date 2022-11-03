@@ -1,6 +1,4 @@
-# Learning Set
-art_friends = {"Rolf", "Anne", "Jen"}
-science_friends = {"Jen", "Charlie"}
+# Learning Dictionary
+friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
 
-all_friends = art_friends.union(science_friends)
-print(all_friends)
+print(friend_ages["Rolf"])
