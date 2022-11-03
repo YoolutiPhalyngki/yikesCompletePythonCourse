@@ -1,12 +1,8 @@
-# Learning if statement
-friends = ["Rolf", "Bob", "Anne"]
-family = ["Jen", "Charlie"]
+# Learning while loop
 
-user_name = input("Enter your name: ")
+is_learning = True
 
-if user_name in friends:
-  print("Hello, friend!")
-elif user_name in family:
-  print("Hello, family!")
-else:
-  print("I don't know you.")
+while is_learning:
+  print("You're learning!")
+  is_learning = input("Are you still learning? ")
+  
