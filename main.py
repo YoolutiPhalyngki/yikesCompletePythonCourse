@@ -1,5 +1,8 @@
-# Learning Dictionary
-friends = [("Rolf", 24), ("Adam", 30), ("Anne", 27)]
+# Learning sum and len function
+grades = [80, 75, 90, 100]
 
-friend_ages = dict(friends)
-print(friend_ages)
+total = sum(grades)
+length = len(grades)
+
+average = total / length
+print(average)
