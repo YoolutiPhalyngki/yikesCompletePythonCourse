@@ -1,5 +1,9 @@
-# Learning joining a lists
+# Learning if statement
+friend = "Rolf"
+user_name = input("Enter your name: ")
 
-friends = ["Rolf", "Anne", "Charlie"]
-comma_separated = ", ".join(friends)
-print(f"My friends are {comma_separated}.")
+if user_name == friend:
+  print("Hello, friend!")
+  print("Still inside if! This runs too.")
+
+print("This runs anyway.")
