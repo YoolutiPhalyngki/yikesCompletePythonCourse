@@ -1,14 +1,5 @@
-# Learning for loop
+# Learning destructuring
 
-students = [
-  {"name": "Rolf", "grade": 90},
-  {"name": "Bob", "grade": 78},
-  {"name": "Jen", "grade": 100},
-  {"name": "Anne", "grade": 80}
-]
-
-for student in students:
-  name = student["name"]
-  grade = student["grade"]
-
-  print(f"{name} has a grade of {grade}.")
+currencies = 0.8, 1.2
+usd, eur = currencies
+print(usd, eur)
