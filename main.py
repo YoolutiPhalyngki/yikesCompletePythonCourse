@@ -1,7 +1,7 @@
 # Learning for loop
 
-friends = ["Rolf", "Jen", "Anne"]
+elements = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-for friend in friends:
-  print(friend)
+for index in elements:
+  print(index)
   
