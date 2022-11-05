@@ -1,6 +1,9 @@
-# Learning destructuring
+# Learning break and continue
 
-friend_ages = {"Rolf": 25, "Anne": 37, "Charlie": 31, "Bob": 22}
+cars = ["ok", "ok", "ok", "faulty", "ok", "ok"]
 
-for name, age in friend_ages.items():
-  print(f"{name} is {age} years old.")
+for status in cars:
+  if status == "faulty":
+    print("Stopping the production line!")
+    break
+  print(f"This car is {status}.")
