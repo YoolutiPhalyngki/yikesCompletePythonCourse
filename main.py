@@ -7,3 +7,4 @@ for status in cars:
     print("Stopping the production line!")
     break
   print(f"This car is {status}.")
+  print("Shipping new car to customer!")
