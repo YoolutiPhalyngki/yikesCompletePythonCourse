@@ -1,12 +1,15 @@
-# Learning break and continue
+# Learning else with loop
 
+cars = ["ok", "ok", "ok", "faulty", "ok", "ok"]
+all_successful = True
 
-for i in range(1, 101):
-  if i % 3 ==0 and i % 5 == 0:
-      print("FizzBuzz")
-  elif i % 3 == 0:
-    print("Fizz")
-  elif i % 5 == 0:
-    print("Buzz")
-  else:
-    print(i)
+for status in cars:
+  if status == "faulty":
+    print("Stopping the production line!")
+    all_successful = False
+    break
+  print(f"This car is {status}.")
+  print("Shipping new cat to customer!")
+
+if all_successful:
+  print("All cars built successfully. No faulty cars!")
