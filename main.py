@@ -1,13 +1,9 @@
-# List comprehension with conditions
+# Set and dictionary comprehension
 
 friends = ["Rolf", "ruth", "charlie", "Jen"]
 guests = ["jose", "Bob", "Rolf", "Charlie", "micheal"]
 
-friends_lower = set([f.lower() for f in friends])
+friends_lower = {n.lower() for n in friends}
+guests_lower = {n.lower() for n in guests}
 
-present_friends = [
-  name.title() 
-  for name in guests 
-  if name.lower() in friends_lower
-]
-print(present_friends)
+print(friends_lower.intersection(guests_lower))
