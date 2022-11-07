@@ -1,11 +1,11 @@
 # Set and dictionary comprehension
 
-friends = ["Rolf", "ruth", "charlie", "Jen"]
-guests = ["jose", "Bob", "Rolf", "Charlie", "micheal"]
+friends = ["Rolf", "Bob", "Jen", "Anne"]
+time_since_seen = [3, 7, 15, 11]
 
-friends_lower = {n.title() for n in friends}
-guests_lower = {n.title() for n in guests}
+long_timers = {
+  friends[i]: time_since_seen[i]
+  for i in range(len(friends))
+}
 
-present_friends = friends_lower.intersection(guests_lower)
-
-print(present_friends)
+print(long_timers)
