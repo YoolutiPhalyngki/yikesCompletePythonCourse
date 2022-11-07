@@ -1,6 +1,5 @@
 # List comprehension in Python
 
-friend_ages = [22, 31, 35, 37]
-age_strings = [f"My friend is {age} years old." for age in friend_ages]
-
-print(age_strings)
+names = ["Rolf", "Bob", "Jen"]
+lower = [name.lower() for name in names]
+print(lower)
