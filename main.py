@@ -1,8 +1,6 @@
-# List comprehension in Python
+# List comprehension with conditions
 
-friend = input("Enter your friend name: ")
-friends = ["Rolf", "Bob", "Jen", "Charlie", "Anne"]
-friends_lower = [name.lower() for name in friends]
+ages = [22, 35, 27, 21, 20]
+odds = [age for age in ages if age % 2 == 1]
 
-if friend.lower() in friends_lower:
-  print(f"{friend.title()} is one of your friends.")
+print(odds)
