@@ -2,12 +2,11 @@
 
 friends = ["Rolf", "John", "Anna"]
 
-temp = list(enumerate(friends))
-#temp = list(zip([0, 1, 2], friends))
-
-for counter, friend in temp:
+for counter, friend in enumerate(friends):
   print(counter)
   print(friend)
 
-
+print(enumerate(friends))
+print(list(enumerate(friends)))
+print(dict(enumerate(friends)))
   
