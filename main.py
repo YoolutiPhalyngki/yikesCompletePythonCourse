@@ -5,3 +5,5 @@ def greet():
   print(f"Hello, {name}!")
 
 greet()
+
+print(name)
