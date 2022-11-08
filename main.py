@@ -1,9 +1,12 @@
-# Learning Function in Python
+# Learning Arguments and Parameters
 
-def greet():
-  name = input("Enter your name: ")
-  print(f"Hello, {name}!")
+car = {
+  "make": "Ford",
+  "model": "Fiesta",
+  "mileage": 23000,
+  "fuel_consumed": 460
+}
 
-greet()
-
-print(name)
+mpg = car["mileage"] / car["fuel_consumed"]
+name = f"{car['make']} {car['model']}"
+print(f"{name} does {mpg} miles per gallon.")
