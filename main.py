@@ -7,9 +7,9 @@ cars = [
   {"make": "Mini", "model": "Cooper", "mileage": 31000, "fuel_consumed": 235},
 ]
 
-def calculate_mpg(car_to_calculate):
-  mpg = car_to_calculate["mileage"] / car_to_calculate["fuel_consumed"]
-  name = f"{car_to_calculate['make']} {car_to_calculate['model']}"
+def calculate_mpg(car):
+  mpg = car["mileage"] / car["fuel_consumed"]
+  name = f"{car['make']} {car['model']}"
   print(f"{name} does {mpg} miles per gallon.")
 
 for car in cars:
