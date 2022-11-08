@@ -1,8 +1,11 @@
-# zip() funtion
+# The enumerate function
 
-friends = ["Rolf", "Bob", "Jen", "Anne"]
-time_since_seen = [3, 7, 15, 11]
+friends = ["Rolf", "John", "Anna"]
 
-long_timers = list(zip(friends, time_since_seen, [1, 2, 3, 4, 5]))
+index = 0
 
-print(long_timers)
+for friend in friends:
+  print(index)
+  print(friend)
+  index = index + 1
+  
