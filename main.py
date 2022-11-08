@@ -2,10 +2,16 @@
 
 friends = ["Rolf", "John", "Anna"]
 
-index = 0
+counter = 0
 
 for friend in friends:
-  print(index)
+  print(counter)
   print(friend)
-  index = index + 1
+  index = counter + 1
+
+
+for counter, friend in enumerate(friends):
+  print(counter)
+  print(friend)
+  
   
