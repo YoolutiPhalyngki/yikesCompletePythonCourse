@@ -12,4 +12,5 @@ def calculate_mpg(car_to_calculate):
   name = f"{car_to_calculate['make']} {car_to_calculate['model']}"
   print(f"{name} does {mpg} miles per gallon.")
 
-calculate_mpg(cars[1])
+for car in cars:
+  calculate_mpg(car)
