@@ -7,4 +7,6 @@ for counter, friend in enumerate(friends):
   print(friend)
 
 print(list(enumerate(friends)))
+
+print(list(zip([0, 1, 2], friends)))
   
