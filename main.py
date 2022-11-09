@@ -1,3 +1,12 @@
 # Learning default parameters
 
-print(1, 2, 3, 4, 5, sep=" - ")
+default_y = 3
+
+def add(x, y=default_y):
+  total = x + y
+  print(total)
+
+add(2)
+
+default_y = 4
+add(2)
