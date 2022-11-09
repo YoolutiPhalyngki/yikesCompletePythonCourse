@@ -1,10 +1,8 @@
-# Learning Functions and return values in Python
+# Learning default parameters
 
-def divide(x, y):
-  if y == 0:
-    return "You tried to divide by zero!"
-  else:
-    return x / y
+def add(x, y=3):
+  total = x + y
+  return total
 
-print(divide(10, 2))
-print(divide(6, 0))
+print(add(5, 10))
+print(add(5))
