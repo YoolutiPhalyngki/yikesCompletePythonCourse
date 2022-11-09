@@ -1,7 +1,6 @@
 # Learning Lambda functions in Python
 
-def average(sequence):
-  return sum(sequence) / len(sequence)
+average = lambda sequence: sum(sequence) / len(sequence)
 
 students = [
   {"name": "Rolf", "grades": (67, 90, 95, 100)},
