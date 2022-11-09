@@ -1,12 +1,5 @@
-# Learning default parameters
+# Learning Lambda functions in Python
 
-default_y = 3
+divide = lambda x, y: x / y
 
-def add(x, y=default_y):
-  total = x + y
-  print(total)
-
-add(2)
-
-default_y = 4
-add(2)
+print(divide(15, 3))
