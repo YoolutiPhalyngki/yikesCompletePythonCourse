@@ -1,13 +1,9 @@
 # Learning first-class functions
 
-avg = lambda seq: sum(seq) / len(seq)
-total = lambda seq: sum(seq)
-top = lambda seq: max(seq)
-
 operations = {
-  "average": avg,
-  "total": total,
-  "top": top
+  "average": lambda seq: sum(seq) / len(seq),
+  "total": sum,
+  "top": max
 }
 
 students =[
