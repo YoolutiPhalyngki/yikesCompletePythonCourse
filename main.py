@@ -6,3 +6,4 @@ def add(x, y=3):
 
 print(add(5, 10))
 print(add(5))
+print(add(x=3))
