@@ -1,8 +1,6 @@
 # Learning first-class functions
 
-def greet():
-  print("Hello")
+def average(seq):
+  return sum(seq) / len(seq)
 
-hello = greet
-
-hello()
+avg = lambda seq: sum(seq) / len(seq)
