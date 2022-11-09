@@ -1,5 +1,6 @@
 # Learning Lambda functions in Python
 
-divide = lambda x, y: x / y
+d = (lambda x, y: x / y)(15, 3)
 
-print(divide(15, 3))
+print(d)
+
