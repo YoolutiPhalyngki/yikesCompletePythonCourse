@@ -3,4 +3,6 @@
 def greet():
   print("Hello")
 
-greet
+hello = greet
+
+hello()
