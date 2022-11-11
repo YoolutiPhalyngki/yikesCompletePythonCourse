@@ -22,6 +22,6 @@ ford.cars.append('Fiesta')
 ford.cars.append('Focus')
 
 print(len(ford))
-print(ford[0])
+print(ford[0]) # Garage.__getitem__(ford, 0)
 
 
