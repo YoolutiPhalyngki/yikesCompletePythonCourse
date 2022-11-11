@@ -1,8 +1,9 @@
-class Movie:
-  def __init__(self, name, year):
+# Learning Magic methods in Python
+
+class Student:
+  def __init__(self, name):
     self.name = name
-    self.year = year
 
-matrix = Movie('The Matrix', 1994)
-
-print(matrix.name)
+movies = ['Matrix', 'Finding Nemo']
+print(movies.__class__)
+print("hi".__class__)
