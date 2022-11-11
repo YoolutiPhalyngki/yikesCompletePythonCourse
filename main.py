@@ -20,4 +20,4 @@ class Student:
 
 student_one = Student('Rolf Smith', [70, 88, 90, 99])
 
-print(student_one.name)
+print(student_one.__class__)
