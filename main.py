@@ -1,30 +1,8 @@
-# Learning more about classes and objects
+class Movie:
+  def __init__(self, name, year):
+    self.name = name
+    self.year = year
 
-my_student = {
-  'name': 'Rolf Smith',
-  'grades': [70, 88, 90, 99],
-  'average': None # something here
-}
+matrix = Movie('The Matrix', 1994)
 
-def average_grade(student):
-  return sum(student['grades']) / len(student['grades'])
-
-
-class Student:
-  def __init__(self, new_name, new_grades):
-    self.name = new_name
-    self.grades = new_grades
-
-  def average(self):
-    return sum(self.grades) / len(self.grades)
-
-student_one = Student('Rolf Smith', [70, 88, 90, 99])
-student_two = Student('Jose', [50, 60, 99, 100])
-
-
-print(student_one.grades)
-
-def average(student):
-  return sum(student.grades) / len(student.grades)
-
-print(average(student_one))
+print(matrix.name)
