@@ -15,3 +15,12 @@ rolf.marks.append(78)
 rolf.marks.append(99)
 
 print(rolf.average())
+
+
+class Foo:
+  @classmethod
+  def hi(cls):
+    print(cls.__name__)
+
+my_object = Foo()
+my_object.hi()
