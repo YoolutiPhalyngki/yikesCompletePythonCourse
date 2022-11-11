@@ -23,5 +23,6 @@ my_club.players.append('Anne')
 print(len(my_club))
 print(my_club.__repr__())
 print(my_club)
+print(my_club[0])
 for club in my_club:
   print(club)
