@@ -1,11 +1,25 @@
-class Movie:
-  def __init__(self, new_name, new_director):
+# Learning more about classes and objects
+
+my_student = {
+  'name': 'Rolf Smith',
+  'grades': [70, 88, 90, 99],
+  'average': None # something here
+}
+
+def average_grade(student):
+  return sum(student['grades']) / len(student['grades'])
+
+
+class Student:
+  def __init__(self, new_name, new_grades):
     self.name = new_name
-    self.director = new_director
+    self.grades = new_grades
 
-  def print_info(self):
-    print(f"<<{self.name}>> by {self.director}")
+  def average(self):
+    return sum(self.grades) / len(self.grades)
 
+student_one = Student('Rolf Smith', [70, 88, 90, 99])
+student_two = Student('Jose', [50, 60, 99, 100])
 
-my_movie = Movie('The Matrix', 'Wachowski')
-my_movie.print_info()
+print(student_one.average())
+print(Student.average(student_one))
