@@ -24,3 +24,12 @@ class Foo:
 
 my_object = Foo()
 my_object.hi()
+
+
+class Bar:
+  @staticmethod
+  def hi():
+    print('Hello, I don\'t take parameters.')
+
+another_object = Bar()
+another_object.hi()
