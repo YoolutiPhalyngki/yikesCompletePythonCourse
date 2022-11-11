@@ -1,15 +1,35 @@
-# Learning @classmethod and @staticmethod more example
+# Learning @classmethod and @staticmethod
 
-class FixedFloat:
-  def __init__(self, amount):
-    self.amount = amount
+class Student:
+  def __init__(self, name, school):
+    self.name = name
+    self.school = school
+    self.marks = []
 
-  def __repr__(self):
-    return f'<FixedFloat {self.amount:.2f}>'
+  def average(self):
+    return sum(self.marks) / len(self.marks)
 
+rolf = Student('Rolf', 'MIT')
+
+rolf.marks.append(78)
+rolf.marks.append(99)
+
+print(rolf.average())
+
+
+class Foo:
+  @classmethod
+  def hi(cls):
+    print(cls.__name__)
+
+my_object = Foo()
+my_object.hi()
+
+
+class Bar:
   @staticmethod
-  def from_sum(value1, value2):
-    return FixedFloat(value1 + value2)
+  def hi():
+    print('Hello, I don\'t take parameters.')
 
-new_number = FixedFloat.from_sum(19.575, 0.789)
-print(new_number)
+# another_object = Bar()
+Bar.hi()
