@@ -22,5 +22,5 @@ class Euro(FixedFloat):
   def __repr__(self):
     return f'<Euro {self.symbol}{self.amount:.2f}>'
 
-money = Euro(18.786)
+money = Euro.from_sum(16.758, 9.999)
 print(money)
