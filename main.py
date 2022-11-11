@@ -21,5 +21,10 @@ class Student:
 student_one = Student('Rolf Smith', [70, 88, 90, 99])
 student_two = Student('Jose', [50, 60, 99, 100])
 
-print(student_one.average())
-print(Student.average(student_one))
+
+print(student_one.grades)
+
+def average(student):
+  return sum(student.grades) / len(student.grades)
+
+print(average(student_one))
