@@ -1,29 +1,27 @@
-# Learning Magic methods in Python
-
-class Student:
+class Club:
   def __init__(self, name):
     self.name = name
-
-movies = ['Matrix', 'Finding Nemo']
-
-
-class Garage:
-  def __init__(self):
-    self.cars = []
+    self.players = []
 
   def __len__(self):
-    return len(self.cars)
+    return len(self.players)
 
   def __getitem__(self, i):
-    return self.cars[i]
+    return self.players[i]
 
   def __repr__(self):
-    return f"Garage with {len(self)} cars."
+    return f"Club {self.name}: {self.players}"
 
-ford = Garage()
-ford.cars.append('Fiesta')
-ford.cars.append('Focus')
+  def __str__(self):
+    return f"Club {self.name} with {len(self.players)} players"
 
-print(ford)
+my_club = Club('Arsenal')
 
+my_club.players.append('Rolf')
+my_club.players.append('Anne')
 
+print(len(my_club))
+print(my_club.__repr__())
+print(my_club)
+for club in my_club:
+  print(club)
