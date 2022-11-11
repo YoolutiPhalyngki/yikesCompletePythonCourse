@@ -1,20 +1,17 @@
+# Learning @classmethod and @staticmethod
+
 class Student:
   def __init__(self, name, school):
     self.name = name
     self.school = school
     self.marks = []
 
-  @property
   def average(self):
     return sum(self.marks) / len(self.marks)
 
-class WorkingStudent(Student):
-  def __init__(self, name, school, salary):
-    super().__init__(name, school)
-    self.salary = salary
+rolf = Student('Rolf', 'MIT')
 
+rolf.marks.append(78)
+rolf.marks.append(99)
 
-rolf = WorkingStudent("Rolf", "MIT", 15.50)
-rolf.marks.append(57)
-
-print(rolf.average)
+print(rolf.average())
