@@ -1,13 +1,7 @@
-def my_custom_filter(func, iterable):
-  for i in iterable:
-    if func(i):
-      yield i
-
 friends = ['Rolf', 'Jose', 'Randy', 'Anna', 'Mary']
-start_with_r = my_custom_filter(lambda friend: friend.startswith('R'), friends)
+start_with_r = filter(lambda friend: friend.startswith('R'), friends)
 
 another_starts_with_r = (f for f in friends if f.startswith('R'))
 
-
-print(list(start_with_r))
-print(list(start_with_r))
+friends_lower = map(lambda x: x.lower(), friends)
+print(next(friends_lower))
