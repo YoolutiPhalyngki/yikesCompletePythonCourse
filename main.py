@@ -1,10 +1,26 @@
-friends = ['Rolf', 'Jose', 'Randy', 'Anna', 'Mary']
-start_with_r = filter(lambda friend: friend.startswith('R'), friends)
+friends = [
+  {
+    'name': 'Rolf',
+    'location': 'Washington, D.C.'
+  },
+  {
+    'name': 'Anna',
+    'location': 'San Francisco'
+  },
+  {
+    'name': 'Charlie',
+    'location': 'San Francisco'
+  },
+  {
+    'name': 'Jose',
+    'location': 'San Francisco'
+  }
+]
 
-another_starts_with_r = (f for f in friends if f.startswith('R'))
+your_location = input('Where are you right now? ')
+friends_nearby = [friend for friend in friends if friend['location'] == your_location]
 
-friends_lower = map(lambda x: x.lower(), friends)
-friends_lower = [friend.lower() for friend in friends]
-friends_lower = (friend.lower() for friend in friends)
+if len(friends_nearby) > 0:
+  print('You are not alone!')
 
-print(next(friends_lower))
+
