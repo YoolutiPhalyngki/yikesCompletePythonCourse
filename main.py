@@ -1,21 +1,34 @@
-class PrimeGenerator:
-  def __init__(self, stop):
-    self.stop = stop
-    self.start = 2
+class FirstHundredGenerator:
+  def __init__(self):
+    self.number = 0
 
   def __next__(self):
-    for n in range(self.start, self.stop):
-      for x in range(2, n):
-        if n % x == 0:
-          break
-      else:
-        self.start = n + 1
-        return n
-    raise StopIteration()
+    if self.number < 100:
+      current = self.number
+      self.number += 1
+      return current
+    else:
+      raise StopIteration()
 
-my_gen = PrimeGenerator(8)
-print(next(my_gen))
-print(next(my_gen))
-print(next(my_gen))
-print(next(my_gen))
-print(next(my_gen))
+  def __iter__(self):
+    return self
+
+
+class AnotherIterable:
+  def __init__(self):
+    self.cars = ['Fiesta', 'Focus']
+
+  def __len__(self):
+    return len(self.cars)
+
+  def __getitem__(self, i):
+    return self.cars[i]
+
+
+for car in AnotherIterable():
+  print(car)
+
+my_numbers = [x for x in [1, 2, 3, 4, 5]]
+my_numbers_gen = (x for x in [1, 2, 3, 4, 5])
+
+print(next(my_numbers_gen))
