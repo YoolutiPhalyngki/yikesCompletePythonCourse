@@ -22,6 +22,6 @@ transactions = [
 ]
 
 for t in transactions:
-  add_balance(*t)
+  add_balance(amount=t[0], name=t[1])
 
 print(accounts)
