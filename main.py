@@ -1,8 +1,7 @@
-age = 20
+primes = [2, 3, 5]
 
-def increase_age(current_age):
-  current_age = current_age + 1
+print(id(primes))
 
-print(id(age))
-increase_age(age)
-print(id(age))
+primes += [7, 11]  # primes = primes.__iadd__([7, 11])
+
+print(id(primes))
