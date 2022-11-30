@@ -22,6 +22,24 @@ transactions = [
 ]
 
 for t in transactions:
-  add_balance(amount=t[0], name=t[1])
+  add_balance(name=t[1], amount=t[0])
 
-print(accounts)
+
+
+class User:
+  def __init__(self, username, password):
+    self.username = username
+    self.password = password
+
+  @classmethod
+  def from_dict(cls, data):
+    return cls(data['username'], data['password'])
+
+# imagine these users are coming from a database...
+users = [
+  {'username': 'rolf', 'password': '123'},
+  {'username': 'tecladoisawesome', 'password': 'youaretoo'}
+]
+
+user_objects = map(User.from_dict,users)
+user_objects = [User.from_dict(u) for u in users]
