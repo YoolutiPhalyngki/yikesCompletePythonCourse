@@ -1,34 +1,23 @@
-friends = [
-  {
-    'name': 'Rolf',
-    'location': 'Washington, D.C.'
-  },
-  {
-    'name': 'Anna',
-    'location': 'San Francisco'
-  },
-  {
-    'name': 'Charlie',
-    'location': 'San Francisco'
-  },
-  {
-    'name': 'Jose',
-    'location': 'San Francisco'
-  }
-]
+friends_last_seen = {
+  'Rolf': 31,
+  'Jen': 1,
+  'Anne': 7
+}
 
-your_location = input('Where are you right now? ')
-friends_nearby = [friend for friend in friends if friend['location'] == your_location]
+print(id(friends_last_seen))
 
-if any(friends_nearby):
-  print('You are not alone!')
+friends_last_seen = {
+  'Rolf': 31,
+  'Jen': 1,
+  'Anne': 7
+}
 
-"""
-Falsy Value
-* 0, 0.0
-* None
-* [], (), {}, set()
-* False
-"""
+print(id(friends_last_seen))
 
-print(all([0,1, 2, 3, 4, 5]))
+friends_last_seen['Rolf'] = 0
+
+print(id(friends_last_seen))
+
+my_int = 5
+
+print(id(my_int))
