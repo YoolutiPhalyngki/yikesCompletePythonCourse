@@ -1,13 +1,14 @@
-accounts = {
-  'checking': 1958.00,
-  'savings': 3695.50
-}
+def create_account(name: str, holder: str, account_holders: list = []):
+  print(id(account_holders))
+  account_holders.append(holder)
 
-def add_balance(amount: float, name: str = 'checking') -> float:
-  """Function to update the balance of an account and return the new balance."""
-  accounts[name] += amount
-  return accounts[name]
+  return {
+    'name': name,
+    'main_account_holder': holder,
+    'account_holders': account_holders
+  }
 
-add_balance(500.00)
+a1 = create_account('checking', 'Rolf')
+a2 = create_account('savings', 'Jen')
 
-print(accounts['checking'])
+print(a2)
