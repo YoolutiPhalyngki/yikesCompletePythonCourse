@@ -43,3 +43,12 @@ user_objects = [User(username=data['username'], password=data['password']) for d
 user_objects = [User(**data) for data in users]
 
 print(user_objects)
+
+users = [
+  ('rolf', '123'),
+  ('tecladoisawesome', 'youaretoo')
+]
+
+user_objects = [User(*data) for data in users]
+
+print(user_objects)
