@@ -1,7 +1,13 @@
-primes = [2, 3, 5]
+accounts = {
+  'checking': 1958.00,
+  'savings': 3695.50
+}
 
-print(id(primes))
+def add_balance(amount: float, name: str) -> float:
+  """Function to update the balance of an account and return the new balance."""
+  accounts[name] += amount
+  return accounts[name]
 
-primes = primes + [7, 11]   # primes = primes.__add__([7, 11])
+add_balance(500.00, 'savings')
 
-print(id(primes))
+print(accounts['savings'])
