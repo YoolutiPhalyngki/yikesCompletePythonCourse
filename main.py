@@ -1,16 +1,27 @@
-def create_account(name: str, holder: str, account_holders = None):
-  if not account_holders:
-    account_holders = []
-    
-  account_holders.append(holder)
+accounts = {
+  'checking': 1958.00,
+  'savings': 3695.50
+}
 
-  return {
-    'name': name,
-    'main_account_holder': holder,
-    'account_holders': account_holders
-  }
+def add_balance(amount: float, name: str) -> float:
+  """Function to update the balance of an account and return the new balance."""
+  accounts[name] += amount
+  return accounts[name]
 
-a1 = create_account('checking', 'Rolf')
-a2 = create_account('savings', 'Jen')
 
-print(a2)
+transactions = [
+  (-180.67, 'checking'),
+  (-220.00, 'checking'),
+  (220.00, 'savings'),
+  (-15.70, 'checking'),
+  (-23.90, 'checking'),
+  (-13.00, 'checking'),
+  (1579.50, 'checking'),
+  (-600.50, 'checking'),
+  (600.50, 'savings'),
+]
+
+for t in transactions:
+  add_balance(t[0], t[1])
+
+print(accounts)
