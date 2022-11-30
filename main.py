@@ -21,3 +21,13 @@ print(id(friends_last_seen))
 my_int = 5
 
 print(id(my_int))
+
+my_int = my_int + 1
+
+print(id(my_int))
+
+friends = ['Rolf', 'Jose']
+print(id(friends))
+
+friends.append('Jen')
+print(id(friends))
