@@ -31,3 +31,11 @@ print(id(friends))
 
 friends.append('Jen')
 print(id(friends))
+
+"""
+Immutable:
+integers
+floats
+strings
+tuples
+"""
