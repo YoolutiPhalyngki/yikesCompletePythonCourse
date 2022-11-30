@@ -31,9 +31,6 @@ class User:
     self.username = username
     self.password = password
 
-  @classmethod
-  def from_dict(cls, data):
-    return cls(data['username'], data['password'])
 
 # imagine these users are coming from a database...
 users = [
@@ -41,5 +38,8 @@ users = [
   {'username': 'tecladoisawesome', 'password': 'youaretoo'}
 ]
 
-user_objects = map(User.from_dict,users)
-user_objects = [User.from_dict(u) for u in users]
+user_objects = [User(data['username'], data['password']) for data in users]
+user_objects = [User(username=data['username'], password=data['password']) for data in users]
+user_objects = [User(**data) for data in users]
+
+print(user_objects)
