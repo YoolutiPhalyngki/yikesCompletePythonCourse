@@ -6,20 +6,9 @@
 * deque
 """
 
-from collections import OrderedDict
+from collections import namedtuple
 
-o = OrderedDict()
-o['Rolf'] = 6
-o['Jose'] = 12
-o['Jen'] = 3
+account = ('checking', 1850.90)
 
-print(o)
-
-o.move_to_end('Rolf')
-o.move_to_end('Jen', last=False)
-
-print(o)
-
-o.popitem()
-
-print(o)
+print(account[0])   # name
+print(account[1])   # balance
