@@ -12,12 +12,8 @@ account = ('checking', 1850.90)
 
 Account = namedtuple('Account', ['name', 'balance'])
 
-account = Account('checking', 1850.90)
+account = Account('checking', balance=1850.90)
 print(account.name)
 
 print(account)
-
-name, balance = account  # tuple destructuring
-print(name)
-print(balance)
 
