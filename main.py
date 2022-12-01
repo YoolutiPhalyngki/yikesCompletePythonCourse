@@ -6,18 +6,17 @@
 * deque
 """
 
-from collections import defaultdict
+from collections import OrderedDict
 
-my_company = 'Teclado'
+o = OrderedDict()
+o['Rolf'] = 6
+o['Jose'] = 12
+o['Jen'] = 3
 
-coworkers = ['Jen', 'Li', 'Charlie', 'Rhys']
-other_coworkers = [('Rolf', 'Apple Inc.'), ('Anna', 'Google')]
+print(o)
 
-coworker_companies = defaultdict(lambda: my_company)
+o.move_to_end('Rolf')
+o.move_to_end('Jen', last=False)
 
-for person, company in other_coworkers:
-  coworker_companies[person] = company
-
-print(coworker_companies[coworkers[0]])
-print(coworker_companies['Rolf'])
+print(o)
 
