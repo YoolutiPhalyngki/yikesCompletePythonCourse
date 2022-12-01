@@ -6,20 +6,19 @@
 * deque
 """
 
-from collections import namedtuple
+from collections import deque
 
-account = ('checking', 1850.90)
+friends = deque(('Rolf', 'Charlie', 'Jen', 'Anna'))
+print(friends)
 
-Account = namedtuple('Account', ['name', 'balance'])
+friends.append('Jose')
+friends.appendleft('Anthony')
 
-accountNamedTuple = Account._make(account)
+print(friends)
 
-print(accountNamedTuple)
+friends.pop()
+friends.popleft()
 
-accountNamedTuple = Account(*account)
+print(friends)
 
-print(accountNamedTuple)
-
-print(accountNamedTuple._asdict())
-print(accountNamedTuple._asdict()['balance'])
 
