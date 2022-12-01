@@ -16,3 +16,7 @@ accountNamedTuple = Account._make(account)
 
 print(accountNamedTuple)
 
+accountNamedTuple = Account(*account)
+
+print(accountNamedTuple)
+
