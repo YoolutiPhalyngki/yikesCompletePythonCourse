@@ -20,3 +20,6 @@ o.move_to_end('Jen', last=False)
 
 print(o)
 
+o.popitem()
+
+print(o)
