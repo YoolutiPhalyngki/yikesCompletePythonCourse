@@ -12,9 +12,9 @@ coworkers = [('Rolf', 'MIT'), ('Jen', 'Oxford'), ('Rolf', 'Cambridge'), ('Charli
 
 alma_maters = {}
 
-for coworker in coworkers:
-  if coworker[0] not in alma_maters:
-    alma_maters[coworker[0]] = []
-  alma_maters[coworker[0]].append(coworker[1])
+for coworker, place in coworkers:
+  if coworker not in alma_maters:
+    alma_maters[coworker] = []
+  alma_maters[coworker].append(place)
 
 print(alma_maters)
