@@ -6,11 +6,15 @@
 * deque
 """
 
-from collections import Counter
+from collections import defaultdict
 
-device_temperatures = [13.5, 14.0, 14.0, 14.5, 14.5, 14.5, 15.0, 16.0]
+coworkers = [('Rolf', 'MIT'), ('Jen', 'Oxford'), ('Rolf', 'Cambridge'), ('Charlie', 'Manchester')]
 
-temperature_counter = Counter(device_temperatures)
-print(temperature_counter[14.5])
+alma_maters = {}
 
-print(Counter({'hello': 5, 'hi': 3})['hi'])
+for coworker in coworkers:
+  if coworker[0] not in alma_maters:
+    alma_maters[coworker[0]] = []
+  alma_maters[coworker[0]].append(coworker[1])
+
+print(alma_maters)
