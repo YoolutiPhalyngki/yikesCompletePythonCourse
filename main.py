@@ -8,15 +8,16 @@
 
 from collections import defaultdict
 
-coworkers = [('Rolf', 'MIT'), ('Jen', 'Oxford'), ('Rolf', 'Cambridge'), ('Charlie', 'Manchester')]
+my_company = 'Teclado'
 
-alma_maters = defaultdict(list)
+coworkers = ['Jen', 'Li', 'Charlie', 'Rhys']
+other_coworkers = [('Rolf', 'Apple Inc.'), ('Anna', 'Google')]
 
-for coworker, place in coworkers:
-  alma_maters[coworker].append(place)
+coworker_companies = defaultdict(lambda: my_company)
 
-alma_maters.default_factory = int
+for person, company in other_coworkers:
+  coworker_companies[person] = company
 
-print(alma_maters['Rolf'])
-print(alma_maters['Anne'])
-print(alma_maters['Jose'])
+print(coworker_companies[coworkers[0]])
+print(coworker_companies[other_coworkers[0][0]])
+
