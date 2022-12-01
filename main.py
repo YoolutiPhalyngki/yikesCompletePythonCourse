@@ -20,3 +20,6 @@ accountNamedTuple = Account(*account)
 
 print(accountNamedTuple)
 
+print(accountNamedTuple._asdict())
+print(accountNamedTuple._asdict()['balance'])
+
