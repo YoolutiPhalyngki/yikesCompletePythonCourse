@@ -12,8 +12,7 @@ account = ('checking', 1850.90)
 
 Account = namedtuple('Account', ['name', 'balance'])
 
-account = Account('checking', balance=1850.90)
-print(account.name)
+accountNamedTuple = Account._make(account)
 
-print(account)
+print(accountNamedTuple)
 
