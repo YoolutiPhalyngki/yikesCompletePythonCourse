@@ -17,3 +17,7 @@ print(account.name)
 
 print(account)
 
+name, balance = account  # tuple destructuring
+print(name)
+print(balance)
+
