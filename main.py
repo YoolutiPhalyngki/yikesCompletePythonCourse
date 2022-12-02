@@ -1,8 +1,8 @@
-email = 'jose@tecladocode.com'
-parts = email.split('@')
+import re
 
-name = parts[0]
-domain = parts[1]
+price = 'Price: $189.50'
+expression = '189.50'
 
-print(name)
-print(domain)
+matches = re.search(expression, price)
+print(matches.group(0))
+print(matches.group(1))
