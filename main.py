@@ -1,17 +1,14 @@
-import time
+import re
 
-def measure_runtime(func):
-  start = time.time()
-  func()
-  end = time.time()
-  print(end - start)
+email = 'jose@tecladocode.com'
+expression = '[a-z]+'
 
-def powers(limit):
-  return [x**2 for x in range(limit)]
+matches = re.findall(expression, email)
+print(matches)
 
-measure_runtime(lambda: powers(500000))
+name = matches[0]
+domain = f'{matches[1]}.{matches[2]}'
 
-import timeit
+print(name)
+print(domain)
 
-print(timeit.timeit("[x**2 for x in range(10)]"))
-print(timeit.timeit("list(map(lambda x: x**2, range(10)))"))
