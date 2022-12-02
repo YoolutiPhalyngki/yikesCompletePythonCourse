@@ -5,3 +5,6 @@ tomorrow = today + timedelta(days=1)
 
 print(today)
 print(tomorrow)
+
+print(today.strftime('%d-%m-%Y %H:%M.%f'))
+print(today.strftime('%F %T.%f'))
