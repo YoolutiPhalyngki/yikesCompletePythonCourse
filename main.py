@@ -1,14 +1,8 @@
-import re
-
 email = 'jose@tecladocode.com'
-expression = '[a-z\.]+'
+parts = email.split('@')
 
-matches = re.findall(expression, email)
-print(matches)
-
-name = matches[0]
-domain = matches[1]
+name = parts[0]
+domain = parts[1]
 
 print(name)
 print(domain)
-
