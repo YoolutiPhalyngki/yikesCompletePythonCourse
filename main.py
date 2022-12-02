@@ -1,5 +1,7 @@
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
-print(datetime.now())
+today = datetime.now(timezone.utc)
+tomorrow = today + timedelta(days=1)
 
-print(datetime.now(timezone.utc))
+print(today)
+print(tomorrow)
