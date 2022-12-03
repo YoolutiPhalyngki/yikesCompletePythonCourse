@@ -7,8 +7,8 @@ def greet():
 
 def before_and_after(func: Callable):
   print("Before...")
-  func()
+  print(func())
   print("After...")
 
 
-before_and_after(5)
+before_and_after(lambda: 5)
