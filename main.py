@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s', level=logging.DEBUG)
 logger = logging.getLogger('test_logger')
 
 logger.info('This will not show up.')
