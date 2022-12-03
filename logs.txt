@@ -1,0 +1,4 @@
+2022-12-03 18:56:52,100 INFO     [main.py:10] This will not show up.
+2022-12-03 18:56:52,100 WARNING  [main.py:11] This will.
+2022-12-03 18:56:52,101 DEBUG    [main.py:12] This is a debug message.
+2022-12-03 18:56:52,101 CRITICAL [main.py:13] A critical error occurred.
