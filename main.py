@@ -10,9 +10,12 @@ movies = [
 
 
 def find_movie(expected: str, finder: Callable):
+  found = []
   for movie in movies:
     if finder(movie) == expected:
-      return movie
+      found.append(movie)
+
+  return found
 
 find_by = input("What property are we searching by? ")
 looking_for = input("What are you looking for? ")
