@@ -2,3 +2,7 @@
 2022-12-03 18:56:52,100 WARNING  [main.py:11] This will.
 2022-12-03 18:56:52,101 DEBUG    [main.py:12] This is a debug message.
 2022-12-03 18:56:52,101 CRITICAL [main.py:13] A critical error occurred.
+03-12-2022 19:02:01 INFO     [main.py:11] This will not show up.
+03-12-2022 19:02:01 WARNING  [main.py:12] This will.
+03-12-2022 19:02:01 DEBUG    [main.py:13] This is a debug message.
+03-12-2022 19:02:01 CRITICAL [main.py:14] A critical error occurred.
