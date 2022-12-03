@@ -9,10 +9,13 @@ movies = [
 ]
 
 
-def find_movie(finder: Callable):
+def find_movie(expected: str, finder: Callable):
   for movie in movies:
-    print(finder(movie))
+    if finder(movie) == expected:
+      return movie
 
 find_by = input("What property are we searching by? ")
 looking_for = input("What are you looking for? ")
-find_movie(lambda movie: movie[find_by])
+
+movie = find_movie(looking_for, lambda movie: movie[find_by])
+print(movie)
