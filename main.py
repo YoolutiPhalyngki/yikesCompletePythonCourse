@@ -7,8 +7,8 @@ def greet():
 
 def before_and_after(func: Callable):
   print("Before...")
-  print(func())
+  func()
   print("After...")
 
 
-before_and_after(greet())
+before_and_after(greet)
