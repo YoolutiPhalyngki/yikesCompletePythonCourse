@@ -1,5 +1,6 @@
-import re
+import logging
 
-def is_filename_safe(filename):
-  regex = '^[a-zA-Z0-9][a-zA-Z0-9_()-]*\.(jpg|jpeg|png|gif)$'
-  return re.match(regex, filename) is not None
+logger = logging.getLogger('test_logger')
+
+logger.info('This will not show up.')
+logger.warning('This will.')
