@@ -11,4 +11,4 @@ def before_and_after(func: Callable):
   print("After...")
 
 
-before_and_after(lambda: 5)
+before_and_after(greet())
